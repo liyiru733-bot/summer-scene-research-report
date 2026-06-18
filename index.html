@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夏日场景调研报告 · 美巴泰越印</title>
+<style>
+:root{--bg:#f3f7fa;--card:#fff;--text:#1a2433;--muted:#64748b;--line:#e2e8f0;--accent:#2d9cdb;--accent-bg:#e5f4fc;--r:12px;--w:960px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.75;font-size:15px}
+a{color:var(--accent);word-break:break-all;text-decoration:none}
+a:hover{text-decoration:underline}
+.layout{display:grid;grid-template-columns:160px 1fr;gap:28px;max-width:calc(var(--w) + 180px);margin:0 auto;padding:28px 20px 64px}
+@media(max-width:860px){.layout{grid-template-columns:1fr}.nav{display:none}}
+.nav{position:sticky;top:20px;align-self:start;font-size:12px}
+.nav p{font-size:10px;font-weight:700;color:#94a3b8;letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px}
+.nav a{display:block;padding:5px 8px;color:var(--muted);border-left:2px solid transparent;margin-bottom:2px}
+.nav a:hover{color:var(--accent);border-left-color:var(--accent);background:var(--accent-bg)}
+.hero{grid-column:1/-1;text-align:center;padding:40px 28px;background:linear-gradient(155deg,#e6f3fb,#fdf8f2 50%,#f3f7fa);border:1px solid var(--line);border-radius:18px;margin-bottom:8px}
+.hero .label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.hero h1{font-size:28px;margin:8px 0}
+.hero .sub{color:var(--muted);font-size:14px}
+.chips{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips span{font-size:12px;padding:4px 11px;background:var(--card);border:1px solid var(--line);border-radius:16px;color:var(--muted)}
+main{min-width:0}
+h2{font-size:21px;margin:36px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--accent-bg)}
+h2#summary{margin-top:0;border:none}
+h3{font-size:17px;margin:24px 0 10px}
+h4.ast-sub{font-size:15px;margin:20px 0 8px;color:#1e4976;font-weight:600}
+h5{font-size:14px;margin:14px 0 6px;color:#475569}
+p{margin-bottom:11px;color:#334155}
+p.sub{padding-left:12px;border-left:3px solid var(--accent-bg);font-size:14px}
+ul{margin:0 0 12px 1.15em}
+li{margin:4px 0}
+.motivation{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0 16px}
+@media(max-width:560px){.motivation{grid-template-columns:1fr}}
+.m-item{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;font-size:14px;display:flex;gap:8px}
+.m-item span{color:#e8a0b4}
+.compare{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:4px 0;margin:10px 0 14px;overflow:hidden}
+.cmp-row{display:grid;grid-template-columns:88px 1fr;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);align-items:start}
+.cmp-row:last-child{border-bottom:none}
+.tag{font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;text-align:center;line-height:1.4}
+.tag-all{background:#f1f5f9;color:#475569}
+.tag-wb{background:#fef3e2;color:#b45309}
+.tag-br{background:#ecfdf3;color:#047857}
+.tag-us{background:#eff6ff;color:#1d4ed8}
+.tag-sea{background:#fff7ed;color:#c2410c}
+.tag-ref{background:#f5f3ff;color:#6d28d9}
+.cmp-body{font-size:14px;color:#334155}
+.flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px;margin:10px 0;font-size:13px;color:var(--muted)}
+.flow i{color:#cbd5e1;font-style:normal}
+.pain-hero{margin:12px 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);max-width:520px}
+.pain-hero img{width:100%;display:block}
+.table-wrap{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:680px}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f8fafc;font-weight:600;white-space:nowrap}
+tr:last-child td,tr:last-child th{border-bottom:none}
+.pic{width:100px}
+.thumb{width:88px;height:110px;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:#f8fafc}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.case{font-size:12px;color:var(--muted);min-width:180px}
+.na{color:#cbd5e1}
+.gallery{display:grid;gap:8px;margin:10px 0 16px}
+.gallery.g1{grid-template-columns:1fr;max-width:360px}
+.gallery.g2{grid-template-columns:1fr 1fr}
+.gallery.g3{grid-template-columns:repeat(3,1fr)}
+.gallery.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:640px){.gallery.g3,.gallery.g4{grid-template-columns:1fr 1fr}}
+.gallery figure{margin:0;border-radius:10px;overflow:hidden;border:1px solid var(--line);aspect-ratio:3/4;background:#f8fafc}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block}
+.opp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0 14px}
+@media(max-width:720px){.opp-grid{grid-template-columns:1fr 1fr}}
+.opp{background:linear-gradient(180deg,#fffdf9,#fff);border:1px solid #ede4d6;border-radius:var(--r);padding:14px}
+.opp .n{display:inline-flex;width:22px;height:22px;border-radius:6px;background:var(--accent);color:#fff;font-size:11px;font-weight:700;align-items:center;justify-content:center;margin-bottom:6px}
+.opp p{font-size:13px;color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0 14px}
+@media(max-width:720px){.cards{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.card p{font-size:14px;color:var(--muted);margin:0}
+.quote{background:#fffaf3;border-left:3px solid #f0b429;border-radius:0 10px 10px 0;padding:12px 16px;margin:10px 0;font-size:14px;color:#6b5344}
+.region{padding:14px 18px;border-radius:var(--r);margin:32px 0 12px}
+.region h2{margin:0;border:none;padding:0;color:#fff;font-size:19px}
+.region.us{background:linear-gradient(135deg,#2b5f87,#3d9fd4)}
+.region.br{background:linear-gradient(135deg,#1a6648,#2da86e)}
+.region.sea{background:linear-gradient(135deg,#b85c1e,#e09840)}
+.foot{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12px;padding-top:16px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="layout">
+<header class="hero">
+<div class="label">Summer Scene Research</div>
+<h1>夏日场景调研报告</h1>
+<p class="sub">美国 · 巴西 · 泰国 · 越南 · 印尼 — 海滩与泳池场景社媒影像洞察</p>
+<div class="chips">
+<span>🇺🇸 美国</span><span>🇧🇷 巴西</span><span>🇹🇭 泰国</span>
+<span>🇻🇳 越南</span><span>🇮🇩 印尼</span>
+</div>
+</header>
+<nav class="nav"><p>目录</p><a href="#summary">摘要</a><a href="#overview">跨地区总览</a><a href="#motivation">心理动机</a><a href="#aesthetics">审美异同</a><a href="#painpoints">高频痛点</a><a href="#opportunity">产品机会</a><a href="#us">美国</a><a href="#br">巴西</a><a href="#sea">泰/越/印</a></nav>
+<main><h2 id="summary">摘要</h2><p>夏日海滩拍照是全球社媒最活跃内容场景之一，海边/泳池照片不止是“记录旅行”，更是“结果导向的社交成片”。、其中，人像出片质量是用户的核心诉求。</p><p>本轮调研以TikTok和instagram两个平台为主要阵地。</p><p>TikTok相关内容包括灵感模版、教程、“翻车”记录、拍摄幕后等多元内容，作为主要的方法和真实分享平台；Instagram偏向成片的结果导向，是理想自我的展厅和灵感来源。</p><h2 class="sec" id="overview">一、跨地区总览</h2><h3>1.夏日场景的典型影像类型</h3><h5>1.1 人像主导影像</h5><p>核心发布形态；强调“上镜”“度假感”，围绕面部、身材、背景、氛围的出片模式。</p><p class="sub"><strong>正面人像/全身照</strong>：展示夏日身体状态与外貌</p><p class="sub"><strong>不露脸氛围图</strong>：强化度假感、生活方式与情绪价值。</p><p class="sub"><strong>海边活动关联</strong>：如冲浪、潜水等活动</p><div class="gallery g4"><figure><img src="assets/image1.png" alt="" loading="lazy"></figure><figure><img src="assets/image2.png" alt="" loading="lazy"></figure><figure><img src="assets/image3.jpeg" alt="" loading="lazy"></figure><figure><img src="assets/image4.png" alt="" loading="lazy"></figure></div><h5>1.2 场景与氛围辅助影像</h5><p class="sub"><strong>氛围感剪影</strong>：日落或逆光下的人物轮廓，重点不是脸，而是情绪和海边/泳池的光线关系。</p><p class="sub"><strong>风景主导</strong>：海岸线、泳池全景、躺椅、酒店泳池、海天一线，主打空间感和“我在这里”的存在感，承载地点打卡与旅行分享功能。</p><p class="sub"><strong>细节特写</strong>：脚印、贝壳、沙粒、水珠、饮品、墨镜、防晒霜、泳衣局部，适合做氛围补充图。</p><div class="gallery g4"><figure><img src="assets/image5.png" alt="" loading="lazy"></figure><figure><img src="assets/image6.png" alt="" loading="lazy"></figure><figure><img src="assets/image7.jpeg" alt="" loading="lazy"></figure><figure><img src="assets/image8.jpeg" alt="" loading="lazy"></figure></div><h3 id="motivation">2.夏日场景下的用户心理动机</h3><div class="motivation"><div class="m-item"><span>♥</span>展示理想生活方式和度假氛围</div><div class="m-item"><span>♥</span>展示夏日身体状态与外貌资本</div><div class="m-item"><span>♥</span>展示关系：朋友、情侣、闺蜜、家庭出游等</div><div class="m-item"><span>♥</span>获取社交认同与平台认可</div></div><h3 id="aesthetics">3.审美异同点</h3><h4 class="ast-sub">3.1肤色与肤质</h4><div class="compare">
+<div class="cmp-row"><span class="tag tag-all">共性</span><div class="cmp-body">光泽感、健康均匀</div></div>
+<div class="cmp-row"><span class="tag tag-wb">美国巴西</span><div class="cmp-body">自然肤色和纹理、强光泽感；<br>健康均匀的晒感，晒痕审美（#tan lines #marquinha）</div></div>
+<div class="cmp-row"><span class="tag tag-sea">泰国越南印尼</span><div class="cmp-body">明亮、干净、均匀、通透的高级肤感，受韩流审美影响，一部分人群追求白皙肤色。<br>自然活力肤色，偏向西方审美的肤色风格</div></div>
+</div><div class="gallery g3"><figure><img src="assets/image9.png" alt="" loading="lazy"></figure><figure><img src="assets/image10.jpeg" alt="" loading="lazy"></figure><figure><img src="assets/image11.jpeg" alt="" loading="lazy"></figure></div><h4 class="ast-sub">3.2身材与轮廓</h4><div class="compare">
+<div class="cmp-row"><span class="tag tag-all">共性</span><div class="cmp-body">追求上镜身体状态，姿态挺拔与线条美</div></div>
+<div class="cmp-row"><span class="tag tag-br">巴西</span><div class="cmp-body">更偏丰满和曲线，<br>海滩泳池场景下身体表达更直接。</div></div>
+<div class="cmp-row"><span class="tag tag-us">美国</span><div class="cmp-body">追求偏 fit （匀称），但并非极端瘦。<br>身材自信与身材焦虑并存。</div></div>
+<div class="cmp-row"><span class="tag tag-sea">泰国越南印尼</span><div class="cmp-body">理想身材偏苗条、修长。<br>度假裙装、亮色服饰、泳装等偏好活力感或优雅感</div></div>
+</div><div class="gallery g3"><figure><img src="assets/image12.png" alt="" loading="lazy"></figure><figure><img src="assets/image13.png" alt="" loading="lazy"></figure><figure><img src="assets/image14.png" alt="" loading="lazy"></figure></div><h4 class="ast-sub">3.3 光影与色彩</h4><div class="compare">
+<div class="cmp-row"><span class="tag tag-all">共性</span><div class="cmp-body">黄金时段（日出/日落）光线被所有地区认可。逆光、剪影、闪光灯补光（硬光感）在各地流行。</div></div>
+<div class="cmp-row"><span class="tag tag-ref">引用</span><div class="cmp-body">Reddit|&quot;Gemini can turn almost any photo into a golden-hour beach portrait now. This prompt is ridiculously great &quot;<br><a href="https://www.reddit.com/r/promptingmagic/comments/1t2nqtc/" target="_blank" rel="noopener">https://www.reddit.com/r/promptingmagic/comments/1t2nqtc/</a></div></div>
+<div class="cmp-row"><span class="tag tag-wb">美国巴西</span><div class="cmp-body">更偏好热情暖色</div></div>
+<div class="cmp-row"><span class="tag tag-sea">泰国越南印尼</span><div class="cmp-body">黄金时刻暖色外，清透色调也是一大审美偏好。</div></div>
+</div><div class="gallery g2"><figure><img src="assets/image15.png" alt="" loading="lazy"></figure><figure><img src="assets/image16.png" alt="" loading="lazy"></figure></div><h4 class="ast-sub">3.4背景与环境</h4><div class="compare">
+<div class="cmp-row"><span class="tag tag-all">共性</span><div class="cmp-body">海要蓝、天要净、沙滩要平整、泳池要通透,干净、人少的背景打造开阔舒适的度假感。</div></div>
+</div><div class="gallery g1"><figure><img src="assets/image17.png" alt="" loading="lazy"></figure></div><h4 class="ast-sub">3.5真实感边界</h4><div class="compare">
+<div class="cmp-row"><span class="tag tag-all">共性</span><div class="cmp-body">自然修图；更好看，但仍是我<br>TikTok｜“the best part is you don&#x27;t edit you!!!”</div></div>
+</div><h3 id="painpoints">4.高频痛点总结</h3><div class="flow"><span>找参考/教程</span><i>→</i><span>拍照中</span><i>→</i><span>修图</span><i>→</i><span>发布</span></div><p>Instagram、TikTok 这类强视觉平台放大了“审美模板化”趋势，用户会主动寻找“海滩美学”“度假感”“氛围感”模板来指导拍摄和修图。</p><div class="pain-hero"><img src="assets/image18.png" alt="痛点总览" loading="lazy"></div><div class="table-wrap"><table>
+<thead><tr><th>痛点</th><th>具体描述</th><th>案例示意</th><th>代表性案例</th></tr></thead>
+<tbody>
+<tr>
+<th rowspan="3">光线和角度问题</th>
+<td>白天强光/顶光，黄金时刻时间短</td><td class="pic"><div class="thumb"><img src="assets/image19.png" alt="" loading="lazy"></div></td><td class="case">tiktok上的找光线教程<br><a href="https://www.instagram.com/reel/DS5NXwmkzIe/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">https://www.instagram.com/reel/DS5NXwmkzIe/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==</a></td></tr>
+<tr>
+<td>夜间昏暗，泳池派对场景有彩色荧光</td><td class="pic"><div class="thumb"><img src="assets/image20.png" alt="" loading="lazy"></div></td><td class="case"><a href="https://www.tiktok.com/@drakeon_repeat/video/7645893057635716365?is_from_webapp=1&amp;sender_device=pc&amp;web_id=7649215072090506766" target="_blank" rel="noopener">https://www.tiktok.com/@drakeon_repeat/video/7645893057635716365?is_from_webapp=1&amp;sender_device=pc&amp;web_id=7649215072090506766</a></td></tr>
+<tr>
+<td>泳池场景易因光线角度的折射翻车</td><td class="pic"><div class="thumb"><img src="assets/image21.png" alt="" loading="lazy"></div></td><td class="case"><a href="https://www.tiktok.com/@roemer_productions/video/7560781235639864598?q=photo%20vs%20reality&amp;t=1781242453508" target="_blank" rel="noopener">https://www.tiktok.com/@roemer_productions/video/7560781235639864598?q=photo%20vs%20reality&amp;t=1781242453508</a></td></tr>
+<tr>
+<th rowspan="3">环境干扰</th>
+<td>背景杂物干扰</td><td class="pic"><div class="thumb"><img src="assets/image22.png" alt="" loading="lazy"></div></td><td class="case">背景净化的修图幕后分享引发众多共鸣<br><a href="https://www.tiktok.com/@lills.lifee1/video/7616398782866984222?is_from_webapp=1&amp;sender_device=pc&amp;web_id=7649215072090506766" target="_blank" rel="noopener">https://www.tiktok.com/@lills.lifee1/video/7616398782866984222?is_from_webapp=1&amp;sender_device=pc&amp;web_id=7649215072090506766</a></td></tr>
+<tr>
+<td>沙滩不平整</td><td class="pic"><div class="thumb"><img src="assets/image23.png" alt="" loading="lazy"></div></td><td class="case"><a href="https://www.tiktok.com/@chelsx01x/photo/7639711539058068758?is_from_webapp=1&amp;sender_device=pc&amp;web_id=7649215072090506766" target="_blank" rel="noopener">https://www.tiktok.com/@chelsx01x/photo/7639711539058068758?is_from_webapp=1&amp;sender_device=pc&amp;web_id=7649215072090506766</a></td></tr>
+<tr>
+<td>海风影响头发和服装的造型</td><td class="pic"><div class="thumb"><img src="assets/image24.png" alt="" loading="lazy"></div></td><td class="case">海风影响拍照的幕后分享<br><a href="https://www.tiktok.com/@jessymaypotts/video/7504725548506172694?q=photo%20vs%20reality&amp;t=1781242453508" target="_blank" rel="noopener">https://www.tiktok.com/@jessymaypotts/video/7504725548506172694?q=photo%20vs%20reality&amp;t=1781242453508</a></td></tr>
+<tr>
+<th rowspan="1">拍照羞耻感</th>
+<td>公共场合摆造型的不安</td><td class="pic"><span class="na">—</span></td><td class="case"></td></tr>
+<tr>
+<th rowspan="1">设备焦虑</th>
+<td>评论区常出现「用什么相机」的询问</td><td class="pic"><div class="thumb"><img src="assets/image25.png" alt="" loading="lazy"></div></td><td class="case">沙滩相机出片的幕后分享<br><a href="https://www.tiktok.com/@activeaiah/video/7510032928152358200?is_from_webapp=1&amp;sender_device=pc&amp;web_id=7649215072090506766" target="_blank" rel="noopener">https://www.tiktok.com/@activeaiah/video/7510032928152358200?is_from_webapp=1&amp;sender_device=pc&amp;web_id=7649215072090506766</a></td></tr>
+<tr>
+<th rowspan="1">修图/调色门槛</th>
+<td>用户希望获得统一、高级、平台感强的调色结果</td><td class="pic"><div class="thumb"><img src="assets/image26.png" alt="" loading="lazy"></div></td><td class="case">浮浅出片的前后调色对比<br><a href="https://www.instagram.com/reel/DYBvJuwlMom/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">https://www.instagram.com/reel/DYBvJuwlMom/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==</a></td></tr>
+<tr>
+<th rowspan="1">姿势/构图</th>
+<td>缺会拍照的人；pose 僵硬</td><td class="pic"><div class="thumb"><img src="assets/image27.png" alt="" loading="lazy"></div></td><td class="case"><a href="https://www.tiktok.com/@bela__freitass/video/7592232387698756882?is_from_webapp=1&amp;sender_device=pc&amp;web_id=7649215072090506766" target="_blank" rel="noopener">https://www.tiktok.com/@bela__freitass/video/7592232387698756882?is_from_webapp=1&amp;sender_device=pc&amp;web_id=7649215072090506766</a></td></tr>
+<tr>
+<th rowspan="1">修图失真焦虑</th>
+<td>想要更像 Pinterest / Instagram 的结果，但不想为此失去照片的现场感与人物真实感</td><td class="pic"><span class="na">—</span></td><td class="case">部分评论表达了真实感的矛盾边界<br>“Unpopular opinion… I liked the original version it has more character”<br>“It looked better before!”<br>“A picture is meant to share a moment this doesn&#x27;t share the moment”</td></tr>
+</tbody></table></div><h3 id="opportunity">5.产品机会点</h3><h5>5.1 共性机会点</h5><div class="opp-grid"><div class="opp"><span class="n">1</span><h5>环境净化</h5><p>背景杂物消除、去路人、沙滩平整、泳池边整理，是最高共识需求之一。</p></div><div class="opp"><span class="n">2</span><h5>光线修复</h5><p>黄金光增强、强光高光控制、脸亮景也成立。</p></div><div class="opp"><span class="n">3</span><h5>场景感知调色</h5><p>自动识别皮肤 / 海水 / 天空 / 泳池 / 沙地做分区处理，用户追求的是“整体完成度”，而不是简单增加饱和度。</p></div><div class="opp"><span class="n">4</span><h5>轻体态优化</h5><p>优先修姿态和比例，保护地平线、泳池边线和手部结构。</p></div><div class="opp"><span class="n">5</span><h5>姿势引导</h5><p>让“参考图”变成可执行动作脚本，降低现场翻车率。</p></div><div class="opp"><span class="n">6</span><h5>肤色与质感编辑</h5><p>按地区提供不同默认方向：晒感、健康光泽、通透明亮。</p></div></div><h5>5.2分地区</h5><div class="cards"><div class="card"><h5>皮肤处理</h5><p>在自然光泽肤色下，需区分地区以满足肤色肤质的差异化审美。美国和巴西更偏好古铜光泽，东南亚地区用户主流审美更偏向白皙。</p></div><div class="card"><h5>身材审美</h5><p>在体态优化基础上，需分地区考虑丰满和苗条的身材偏好差异。身材焦虑普遍存在，美国巴西鼓励身材审美更多元包容，不追求极致瘦；主流理想模板偏苗条修长、精致轻盈。</p></div><div class="card"><h5>发布语境</h5><p>美国：重视真实性与个体风格表达。巴西：更强调现场氛围、身体自信与社交热度。东南亚：更强调精致感、完成度、模板化审美和“值得上传”。</p></div></div><div class="region us"><h2 id="us">二、美国</h2></div><p>美国用户对海滩和泳池内容的核心诉求更偏向“生活方式表达”，也就是照片不仅要好看，还要能说明“我是谁、我过着什么样的生活”。</p><h3>1.社媒概况</h3><ul><li>TikTok：模板、翻车、拍摄幕后，是方法平台与翻车现场。</li><li>Reddit：技术求助、身体焦虑、发布顾虑、AI 真实性讨论更集中，真实吐槽与深度求助。</li><li>Instagram：成片展示为主，理想自我展厅。</li><li>Pinterest：海滩穿搭、pose、色调和构图的重要参考源</li><li>相关话题标签：beachday, beach,beachlife,beachgirl, poolparty, poolday, poolside, bikini...</li></ul><h3>2.主流审美</h3><h5>3.1 肤色与肤质</h5><ul><li>偏好 sun-kissed、bronzed、健康晒感</li><li>接受自然皮肤纹理，不追求过度磨皮</li><li>喜欢发光感、油润感，但不希望看起来假面</li></ul><h5>3.2 身材与轮廓</h5><ul><li>理想模板偏 fit、toned、匀称</li><li>不等于极端瘦，更强调“状态在线”</li><li>身材自信与身材焦虑并存，“body positivity”与“beach body pressure”同时存在</li></ul><div class="gallery g3"><figure><img src="assets/image28.png" alt="" loading="lazy"></figure><figure><img src="assets/image29.png" alt="" loading="lazy"></figure><figure><img src="assets/image13.png" alt="" loading="lazy"></figure></div><h5>3.3 光影与色彩</h5><ul><li>黄金时刻是绝对优先项</li><li>偏爱暖、柔、电影感的日落氛围</li><li>喜欢轮廓光、逆光和一点胶片/电影感颗粒</li><li>高对比色彩还原理想中的水色</li></ul><h5>3.4 背景与环境</h5><ul><li>偏好开阔、整洁、低干扰背景</li><li>喜欢真实存在的海滩、泳池、酒店场景，而不是明显“修造”出来的假环境</li></ul><div class="gallery g2"><figure><img src="assets/image30.png" alt="" loading="lazy"></figure><figure><img src="assets/image31.png" alt="" loading="lazy"></figure></div><h3>3.真实感与伦理边界</h3><p>美国市场对“修图边界”的敏感度相对更高，尤其在人物修饰方面。</p><p>普遍接受的逻辑是：</p><ul><li>可以去除无关干扰，如路人、垃圾桶、杂乱背景</li><li>可以优化光线和色彩，让现场更接近记忆中的感觉</li><li>可以轻微调整体态，例如站姿、透视、轻微比例优化</li><li>但不希望把人修成完全不同的人</li></ul><div class="region br"><h2 id="br">三、巴西</h2></div><p>在巴西，海滩不仅是旅行地，更是高频日常社交空间。因此，海滩和泳池场景的影像并不只是节假日内容，而是一种高度生活化、文化化的表达，以“阳光感 + 自信身体表达 + 现场氛围”为关键词</p><h3>1.社媒概况</h3><ul><li>常用平台：Instagram、TikTok、Kwai、Facebook、Pinterest等。其中Kwai平台为首页推荐机制，因无搜索态本次调研中未纳入</li><li>相关社媒标签：praia海滩、piscina泳池、foto na praia海滩照、festa na piscina泳池派对、marquinha de biquíni比基尼晒痕</li></ul><h3>2.主流审美</h3><h5>2.1 身材与轮廓</h5><p>巴西用户对海滩文化接受度很高，海滩不仅是景点，也是日常社交空间，所以他们更容易接受泳装、身体展示类内容。</p><ul><li>更强调曲线感、臀腿线条、身体存在感</li><li>海滩场景中身体表达更直接也更被鼓励</li><li>主流文化强调身体自信，但社媒依然存在明确的理想身体模板</li></ul><blockquote class="quote">Salvei, falta só eu ter um corpo assim agora 😂😂” （我把它保存下来了，现在我只需要一副那样的身材。）</blockquote><h5>2.2 肤色与肤质</h5><ul><li>偏爱健康小麦色、古铜色、日晒感、自然光泽</li><li>marquinha（比基尼晒痕）被视作性感和度假成功的象征之一</li></ul><blockquote class="quote">巴西晒黑教程视频 — finalmente uma marquinha cristã（终于有一条像样的比基尼线了）<a href="https://www.tiktok.com/@sofiasfurlani/video/7455758332998110470" target="_blank" rel="noopener">https://www.tiktok.com/@sofiasfurlani/video/7455758332998110470</a></blockquote><div class="gallery g2"><figure><img src="assets/image32.png" alt="" loading="lazy"></figure><figure><img src="assets/image33.png" alt="" loading="lazy"></figure></div><h5>2.3氛围和滤镜</h5><ul><li>贴纸滤镜表现个人审美和度假氛围的需求</li><li>沙滩海边场景下的贴纸推广受到多人关注和“求贴纸”：</li></ul><div class="gallery g2"><figure><img src="assets/image34.png" alt="" loading="lazy"></figure><figure><img src="assets/image3.jpeg" alt="" loading="lazy"></figure></div><h5>2.4环境和背景</h5><p>偏好真实海滩和热闹氛围，但同时又希望画面主体足够突出</p><p>即使身处拥挤海滩，也希望成片看起来“像是只属于我的场景”</p><blockquote class="quote">“alguém por favor me dá a dica como tirar fotos assim numa praia que fica lotada como Rio de janeiro?”（请问有人能告诉我如何在像里约热内卢这样拥挤的海滩上拍出这样的照片吗）</blockquote><h3>3.真实感与伦理边界</h3><p>巴西用户对氛围增强和身体优化的接受度相对更高，但对“修得僵硬、塑料、失真”依然敏感。</p><p>其边界更接近：</p><ul><li>可以增强阳光感、肤色、轮廓和氛围</li><li>可以净化背景、减少拥挤感</li><li>可以让身体状态更上镜</li><li>但人物依然要保留活力与真实质感，不能修成商业 CG 海报</li></ul><div class="region sea"><h2 id="sea">四、泰/越/印</h2></div><p>东南亚用户在夏日影像中更重视“精致感”和“出片感”，尤其偏好构图完整、色彩干净、画面优雅的内容。</p><p>泳池边、酒店度假、海岛景观这类画面很适合他们的分享习惯，重点常常是氛围而不是强烈的身体展示。 这类用户对模板化美学接受度较高，但也希望最后成片看起来轻松、自然，不要太像商业广告。</p><p>与美国或巴西相比，印尼用户对过于裸露、过度身体化的影像可能更谨慎。在旅游与海岛场景里，印尼用户常把海滩影像与旅行记录、朋友合影、以及内容发布的社交互动结合起来。</p><h3>1.社媒概况</h3><p>三个国家的社交媒体格局具有共性，TikTok、Instagram、Facebook、YouTube在东南亚普遍流行。</p><p>本土即时通讯App进行私域分享：泰国的LINE、越南的Zalo以及印尼的WhatsApp。</p><ul><li>相关关键词：Ins和TikTok平台上年轻群体发布的内容较多以英语标签发布</li><li>泰语：ทะเล海、ชายหาด沙滩、สระว่ายน้ำ泳池、ริมทะเล海边、ทริปทะเล海边旅行...</li><li>印尼语：pantai海滩、laut海 / 海面、kolam renang泳池、foto pantai海滩照片、outfit pantai海边穿搭...</li><li>越南语：bãi biển海滩、hồ bơi泳池、hoàng hôn trên biển海边日落...</li></ul><h3>2.主流审美拆解</h3><h5>2.1 肤色与肤质</h5><ul><li>主流偏好明亮、干净、均匀、通透的肤感</li><li>受韩流与本地审美共同影响，部分用户偏好更白皙方向</li><li>尽管也有向西方健康肤色靠拢的趋势，但“高级干净感”通常比“晒黑感”更主流</li></ul><h5>2.2 身材与轮廓</h5><ul><li>理想模板偏瘦、长、直、轻盈</li><li>会摆 pose、线条顺、比例修长是很重要的上镜标准</li><li>用户对“自己做不出模板里身体状态”的焦虑很明显</li></ul><div class="gallery g4"><figure><img src="assets/image14.png" alt="" loading="lazy"></figure><figure><img src="assets/image10.jpeg" alt="" loading="lazy"></figure><figure><img src="assets/image35.jpeg" alt="" loading="lazy"></figure><figure><img src="assets/image11.jpeg" alt="" loading="lazy"></figure></div><blockquote class="quote">“body tea is the best pose”“my body will not be bodying😭🙏”<a href="https://www.tiktok.com/@kikspcr/video/7630694376334740743" target="_blank" rel="noopener">https://www.tiktok.com/@kikspcr/video/7630694376334740743</a></blockquote><h5>2.3 穿搭与细节</h5><ul><li>度假长裙、浅色或统一色系穿搭常见</li><li>发饰、头巾、美甲、首饰等细节会被认真经营</li><li>画面整体搭配感很重要，用户对“精致度”的感知不仅来自脸，也来自服装和配件是否协同</li></ul><div class="gallery g4"><figure><img src="assets/image36.png" alt="" loading="lazy"></figure><figure><img src="assets/image37.png" alt="" loading="lazy"></figure><figure><img src="assets/image38.png" alt="" loading="lazy"></figure><figure><img src="assets/image39.png" alt="" loading="lazy"></figure></div><h5>2.4 光影与色彩</h5><ul><li>黄金时刻仍是普遍认可的最佳拍摄时段</li><li>同时高度偏爱清透、统一、高级的整体调色</li><li>不喜欢简单粗暴拉高饱和度，更喜欢有“camera feel”或 Lightroom 风格的完成度</li></ul><div class="gallery g3"><figure><img src="assets/image40.png" alt="" loading="lazy"></figure><figure><img src="assets/image41.png" alt="" loading="lazy"></figure><figure><img src="assets/image42.jpeg" alt="" loading="lazy"></figure></div><blockquote class="quote">&quot;pakaii camera apaaa cantik bgttt aaaa（你用的什么相机，太美了！）— 印尼 | 点赞40029<a href="https://www.tiktok.com/@zhafira_nz/video/7516051115444604165" target="_blank" rel="noopener">https://www.tiktok.com/@zhafira_nz/video/7516051115444604165</a></blockquote><h5>2.5 背景与环境</h5><ul><li>海水颜色、天空纯净度、酒店/泳池品质直接影响“值不值得发”</li><li>背景不仅是陪衬，而是成片价值的重要组成部分</li></ul><div class="gallery g2"><figure><img src="assets/image8.jpeg" alt="" loading="lazy"></figure><figure><img src="assets/image43.png" alt="" loading="lazy"></figure></div><blockquote class="quote">&quot;Definisi loe liburan gak buang buang duit karena punya foto yang bagus untuk diaplod&quot;（旅游不浪费钱的定义就是有好照片可以上传）— 印尼 | 点赞58976<a href="https://www.tiktok.com/@zhafira_nz/video/7516051115444604165" target="_blank" rel="noopener">https://www.tiktok.com/@zhafira_nz/video/7516051115444604165</a></blockquote><h3>3.真实感与伦理边界</h3><p>东南亚用户对模板化美学和审美加工的接受度相对较高，只要结果足够自然、统一、干净。</p><p>他们并不排斥滤镜和调色，但会介意：</p><ul><li>人脸修得太假</li><li>肤色不自然</li><li>背景像贴图</li><li>整体太像商业修片而失去生活感</li></ul></main>
+<footer class="foot">夏日场景调研报告 · 美巴泰越印 · 2026</footer>
+</div>
+</body>
+</html>
